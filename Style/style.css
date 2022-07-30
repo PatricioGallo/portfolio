@@ -1,0 +1,756 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 100px;
+  background-image: linear-gradient(to right, rgb(19, 196, 154), rgb(10, 196, 73));
+  font-family: 'Poppins', sans-serif;
+}
+
+.colorVerde {
+  color: rgb(10, 196, 73);
+}
+
+.bordeLateral{
+  border-right: solid grey 1px;
+}
+
+/* inicio del body */
+.cuerpo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+/* --- MENU--- */
+.menu {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+}
+
+.menu_contenido {
+  height: 320px;
+  background-color: white;
+  width: 85px;
+  margin-top: 50px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.opcionMenu {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid rgb(205, 205, 205);
+  border-radius: 5px;
+}
+
+.opcionMenu button {
+  background-color: white;
+  width: 100%;
+  height: 80px;
+  border: none;
+  cursor: pointer;
+  font-size: 11px;
+  border-radius: 5px;
+}
+
+.opcionMenu button img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+.opcionMenu button:hover {
+  color: rgb(10, 196, 73);
+  border: 1px solid rgb(10, 196, 73);
+}
+
+/* --- CARTA PRESENTACION--- */
+.cartaPresentacion {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  height: 600px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 60px 1px #aaaaaa;
+  z-index: 2;
+}
+
+.cartaFoto {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 1px solid rgb(205, 205, 205);
+}
+
+.cartaFoto img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.cartaTitulo {
+  width: 100%;
+  height: 290px;
+}
+
+.cartaTitulo h1 {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.cartaTitulo h2 {
+  color: rgb(10, 196, 73);
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+.CartaEleccion {
+  height: 70px;
+  width: 100%;
+  border-top: 1px solid rgb(205, 205, 205);
+  display: flex;
+  flex-direction: row;
+}
+
+.CartaEleccion button {
+  width: 50%;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.CartaEleccion button:hover {
+  color: rgb(10, 196, 73);
+}
+
+.redesSociales {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.redesSociales img {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+/* ---    -------  INFORMACION ---------      --- */
+.informacion {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+}
+
+.informacion_contenido {
+  width: 650px;
+  height: 570px;
+  background-color: white;
+  margin-top: 15px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.informacion_contenido::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.titulo_informacion {
+  width: 100%;
+  min-height: 85px;
+  border-bottom: 1px solid rgb(205, 205, 205);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.titulo_informacion h1 {
+  font-size: 22px;
+  color: rgb(10, 196, 73);
+  margin-right: 5px;
+  margin-left: 20px;
+  font-weight: 400;
+}
+
+.titulo_informacion h2 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.contenedor_1 {
+  width: 100%;
+  min-height: 210px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgb(205, 205, 205);
+}
+
+.contenedor2 {
+  width: 50%;
+  height: 200px;
+  border-right: 1px solid rgb(205, 205, 205);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor2 p {
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.contenedor2 img {
+  width: 80px;
+  height: 80px;
+}
+
+.contenedor2 h1 {
+  font-size: 17px;
+  color: black;
+  font-weight: 300;
+}
+
+.contenedor2 h2 {
+  font-size: 15px;
+  font-weight: 200;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.contenedor3 {
+  width: 50%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.datos_persona {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgb(205, 205, 205);
+  margin-top: 15px;
+  position: relative;
+}
+
+.datos_persona h3 {
+  font-size: 16px;
+  background-color: rgb(78, 203, 120);
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+
+.datos_persona h4 {
+  font-size: 16px;
+  text-align: right;
+  position: absolute;
+  right: 0px;
+  font-weight: 200;
+}
+
+/*      ----------- RESUME --------------          */
+
+.subtitulo {
+  width: 100%;
+  min-height: 85px;
+  display: flex;
+  flex-direction: row;
+}
+
+.subtitulo_1 {
+  width: 50%;
+  height: 85px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid rgb(205, 205, 205);
+}
+
+.subtitulo_1 img {
+  width: 38px;
+  height: 38px;
+  margin-left: 20px;
+}
+
+.subtitulo_1 h1 {
+  font-size: 17px;
+  margin-left: 20px;
+  font-weight: 300;
+}
+
+.contenedor4 {
+  width: 50%;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.contenedor4 h1 {
+  font-size: 17px;
+  color: black;
+  margin-left: 20px;
+  font-weight: 400;
+}
+
+.contenedor4 h2 {
+  font-size: 15px;
+  font-weight: normal;
+  margin-left: 20px;
+  font-weight: 200;
+}
+
+.contenedor4 h3 {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight: 300;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.tiempo_info {
+  color: rgb(78, 203, 120);
+  border: 1px solid rgb(78, 203, 120);
+  width: 33%;
+  text-align: center;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.tiempo_info h4 {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.barras {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.barras h3 {
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+
+.barra {
+  height: 5px;
+  width: 80%;
+  background-color: rgb(214, 214, 214);
+  border: 1px solid rgb(198, 198, 198);
+  border-radius: 3px;
+  margin-left: 20px;
+}
+
+.barra_90 {
+  height: 5px;
+  width: 90%;
+  background-image: linear-gradient(to right, rgb(76, 230, 21), rgb(10, 196, 73));
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barra_70 {
+  height: 5px;
+  width: 70%;
+  background-image: linear-gradient(to right, rgb(76, 230, 21), rgb(10, 196, 73));
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barra_80 {
+  height: 5px;
+  width: 80%;
+  background-image: linear-gradient(to right, rgb(76, 230, 21), rgb(10, 196, 73));
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circulos{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+
+.circulo{
+  width: 10px;
+  height: 10px;
+  background-color: rgb(214, 214, 214);
+  border: 1px solid rgb(198, 198, 198);
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.circulo_green{
+  width: 10px;
+  height: 10px;
+  background-color: rgb(10, 196, 73);
+  border: 1px solid rgb(198, 198, 198);
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+
+/*      -----------------WORKS----------------- */
+
+.contenedor_2 {
+  width: 100%;
+  min-height: 320px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+  .contenedor5 {
+    width: 50%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contenedor5 button{
+    height: 90%;
+    width: 90%;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+  }
+
+  .contenedor5 button:hover{
+    background-color: rgb(245, 245, 245);
+    color: rgb(10, 196, 73);
+  }
+
+  .contenedor5 button img{
+    height: 200px;
+    width: 100%;
+  }
+
+  .contenedor5 button h1 {
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  .contenedor5 button h2 {
+    font-size: 14px;
+    font-weight: 100;
+    color: rgb(98, 98, 98);
+  }
+
+
+
+/*      -----------------Contacto----------------- */
+
+.contenedor_3{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+
+.centrar {
+  width: 10%;
+}
+
+/* ---------------------- INFORMACION CUERPOS ---------------------- */
+
+.cuerpo_informacion{
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: fixed;
+  left:0px;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: rgba(76, 175, 80, 0.3) /* Green background with 30% opacity */
+}
+
+.fondo_informacion{
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.fondo_informacion img{
+  width: 100%;
+}
+
+.cruz{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 3;
+}
+
+.cruz button{
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.contenido_informacion{
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido_informacion h1{
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contenido_informacion p{
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.botones_informacion{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.botones_informacion button{
+  width: 150px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 20px;
+  background-color: rgb(10, 196, 73);
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.botones_informacion button:hover{
+  background-color: rgb(91, 194, 126);
+}
+/* ---------------------- FIN INFORMACION CUERPOS ---------------------- */
+
+
+
+/* INICIO DE 800 PX */
+@media only screen and (max-width: 1000px) {
+
+  .cuerpo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+
+  /* --- MENU--- */
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    height: 100px;
+  }
+
+  .menu_contenido {
+    height: 100px;
+    background-color: white;
+    width: 650px;
+    margin-top: 0px;
+    border-radius: 0px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .opcionMenu {
+    width: 100%;
+    height: 100px;
+    border-bottom: : 0px solid rgb(205, 205, 205);
+    border-right:  1px solid rgb(205, 205, 205);
+    border-radius: 5px;
+  }
+
+  .opcionMenu button {
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+    border-radius: 5px;
+  }
+
+  /* --- CARTA PRESENTACION--- */
+
+  .cartaPresentacion {
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 240px;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px 0px #aaaaaa;
+    z-index: 0;
+    border-top: 1px solid rgb(205, 205, 205);
+    border-bottom: 1px solid rgb(205, 205, 205);
+
+  }
+
+
+  .cartaFoto {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    border: 1px solid rgb(205, 205, 205);
+  }
+
+  .cartaFoto img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  .cartaTitulo {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 0px;
+  }
+  .cartaTitulo h1 {
+    text-align: center;
+    margin-top: 0px;
+    font-weight: 300;
+  }
+
+  .cartaTitulo h2 {
+    color: rgb(10, 196, 73);
+    font-size: 14px;
+    text-align: center;
+    margin-top: 0px;
+    font-weight: 300;
+  }
+
+
+  .CartaEleccion {
+    display: none;
+  }
+
+  .CartaEleccion button {
+    width: 50%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .CartaEleccion button:hover {
+    color: rgb(10, 196, 73);
+  }
+
+  .redesSociales {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .redesSociales img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+  }
+
+
+  /* ---    -------  INFORMACION ---------      --- */
+  .informacion {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+
+  }
+
+  .informacion_contenido {
+    width: 650px;
+    height: 570px;
+    background-color: white;
+    margin-top: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+}
+
+
+/* ---------------------- INFORMACION CUERPOS ---------------------- */
+
+
+.fondo_informacion{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
