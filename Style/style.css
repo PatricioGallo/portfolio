@@ -758,6 +758,13 @@ body {
 @media only screen and (max-width: 699px) {
 
 
+  body {
+    height: 0px;
+    background-image: linear-gradient(to right, rgb(19, 196, 154), rgb(10, 196, 73));
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+  }
+
     .cuerpo {
       display: flex;
       flex-direction: column;
