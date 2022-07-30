@@ -13,8 +13,8 @@ btn_resume.addEventListener("click",funcionResume);
 btn_works.addEventListener("click",funcionWorks);
 btn_contacto.addEventListener("click",funcionContact);
 
-
 //funciones
+
 
 function funcionAbout(){
     resume.innerHTML=""
