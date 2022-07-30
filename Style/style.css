@@ -950,6 +950,20 @@ body {
       right: 0px;
       font-weight: 200;
     }
+
+    .tiempo_info {
+      width: 50%;
+    }
+
+    .contenedor5 {
+      width: 100%;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     /* ---------------------- INFORMACION CUERPOS ---------------------- */
 
 
