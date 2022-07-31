@@ -352,6 +352,10 @@ function funcionWorks(){
       `
   contenedor_2.append(contenedor5)
 
+  if(lista.id%2 == 1){
+    contenedor5.classList = 'contenedor5 bordeLateral'
+  }
+
   }
 
   btn_about.classList = ""
@@ -432,8 +436,8 @@ function TF(id){
         <p>${item.p2}</p>
         <p>${item.p3}</p>
         <div class="botones_informacion">
-            <a href="${item.proyectLink}"> <button type="button" name="button">VER PROYECTO</button> </a>
-            <a href="${item.codeLink}"> <button type="button" name="button">VER CODIGO</button> </a>
+            <a href="${item.proyectLink}" target="_blank"> <button type="button" name="button">VER PROYECTO</button> </a>
+            <a href="${item.codeLink}" target="_blank"> <button type="button" name="button">VER CODIGO</button> </a>
         </div>
       </div>
 

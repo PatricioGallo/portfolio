@@ -14,7 +14,7 @@ body {
 }
 
 .bordeLateral{
-  border-right: solid grey 1px;
+  border-right:  1px solid rgb(205, 205, 205);
 }
 
 /* inicio del body */
@@ -133,6 +133,16 @@ body {
   border: none;
   cursor: pointer;
 }
+
+.CartaEleccion button a{
+  color: black;
+  text-decoration: none;
+}
+
+.CartaEleccion button a:hover{
+  color: rgb(10, 196, 73);
+}
+
 
 .CartaEleccion button:hover {
   color: rgb(10, 196, 73);
@@ -441,12 +451,13 @@ body {
 
 
   .contenedor5 {
-    width: 50%;
+    width: 49%;
     min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  border-bottom: 1px solid rgb(205, 205, 205);
   }
 
   .contenedor5 button{
@@ -537,6 +548,7 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  color: white;
 }
 
 .contenido_informacion{
@@ -598,6 +610,9 @@ body {
     flex-wrap: nowrap;
   }
 
+  .bordeLateral{
+    border-right:  0px solid rgb(205, 205, 205);
+  }
 
   /* --- MENU--- */
 
@@ -739,6 +754,9 @@ body {
     flex-direction: column;
     overflow: scroll;
   }
+  .contenedor5{
+    border-bottom: 0px solid black;
+  }
   /* ---------------------- INFORMACION CUERPOS ---------------------- */
 
 
@@ -764,7 +782,9 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: white;
   }
-
+  .bordeLateral{
+    border-right:  0px solid rgb(205, 205, 205);
+  }
     .cuerpo {
       display: flex;
       flex-direction: column;
@@ -962,6 +982,7 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      border-bottom: 0px solid black;
     }
 
     /* ---------------------- INFORMACION CUERPOS ---------------------- */
