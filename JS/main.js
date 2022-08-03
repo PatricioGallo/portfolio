@@ -30,8 +30,6 @@ if (flag == 0) {
 }
 
 
-
-
 //funciones
 
 function funcionIngles() {

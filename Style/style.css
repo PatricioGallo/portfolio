@@ -756,9 +756,7 @@ body {
     flex-wrap: nowrap;
   }
 
-.idiomas{
-  display: none;
-}
+
   .bordeLateral{
     border-right:  0px solid rgb(205, 205, 205);
   }
@@ -931,9 +929,19 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: white;
   }
+
+
+
   .idiomas{
+    top : 10px;
+    right: 20px;
+    position: fixed;
+  }
+
+  .flotante{
     display: none;
   }
+
   .bordeLateral{
     border-right:  0px solid rgb(205, 205, 205);
   }
