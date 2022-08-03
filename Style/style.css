@@ -641,6 +641,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content:center;
+  margin-bottom: 30px;
 }
 
 .contenedor_3 iframe{
@@ -756,7 +757,8 @@ body {
     flex-wrap: nowrap;
   }
 
-
+.idiomas{
+}
   .bordeLateral{
     border-right:  0px solid rgb(205, 205, 205);
   }
@@ -1144,6 +1146,25 @@ body {
       align-items: center;
       border-bottom: 0px solid black;
     }
+
+    .circulos{
+      margin-left: 20px;
+    }
+
+    .circulo{
+      margin-left: 5px;
+    }
+
+    .circulo_green{
+      margin-left: 5px;
+    }
+
+    .contenedor_3 iframe{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 15%;
+    }
+
 
     /* ---------------------- INFORMACION CUERPOS ---------------------- */
 
