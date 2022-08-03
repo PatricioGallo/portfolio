@@ -20,6 +20,112 @@ body {
 
 
 
+/* animaciones */
+
+.animacion-salida {
+  animation-name: salida;
+  animation-duration: 0.3s;
+}
+
+@keyframes salida {
+  0%   {margin-left:0;}
+  100% {margin-left: 100%;}
+}
+
+
+.animacion-entrada {
+  animation-name: entrada;
+  animation-duration: 0.3s;
+}
+
+@keyframes entrada {
+  0%   {margin-left:100%;}
+  100% {margin-left: 0%;}
+}
+
+
+
+/* INICIO DEL FLOTANTE */
+
+.flotante{
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+  bottom: 30px;
+  height: 100px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cuerpo_flotante{
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgb(205, 205, 205);
+  border-radius: 10px;
+
+}
+
+.imagen_flotante{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagen_flotante img{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.texto_flotante{
+  width: 300px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto_flotante h1{
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.texto_flotante h2{
+  font-size: 11px;
+  font-weight: 300;
+  text-align: center;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.cruz_flotante{
+  z-index: 4;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+}
+
+.cruz_flotante button{
+  color: black;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cruz_flotante button:hover{
+  color: rgb(1, 120, 34);
+
+}
+
+/* FIN DEL FLOTANTE */
+
 /* INICIO IDIOMA */
 
 .idiomas{

@@ -1,6 +1,6 @@
 //https://preview.themeforest.net/item/ryan-vcard-resume-cv-template/full_screen_preview/21584603?clickid=3ncSjs0lExyNWjhyfISPvwJDUkD1tTUvd057yI0&iradid=275988&iradtype=ONLINE_TRACKING_LINK&irgwc=1&irmptype=mediapartner&irpid=369282&mp_value1=&utm_campaign=af_impact_radius_369282&utm_medium=affiliate&utm_source=impact_radius
 
-//Variables
+//Variables y Programa
 
 let btn_about = document.getElementById("btn_about");
 let btn_resume = document.getElementById("btn_resume");
@@ -8,8 +8,10 @@ let btn_works = document.getElementById("btn_works");
 let btn_contacto = document.getElementById("btn_contacto");
 let btn_ingles = document.getElementById("btn_ingles");
 let btn_espanol = document.getElementById("btn_espanol");
-let idioma = 0;
 
+let idioma = 0;
+let flag=0;
+let flotante_animacion= document.createElement("div");
 
 
 btn_about.addEventListener("click",funcionAbout);
@@ -20,16 +22,82 @@ btn_ingles.addEventListener("click",funcionIngles);
 btn_espanol.addEventListener("click",funcionEspanol);
 
 
+if (flag==0)
+{
+  setTimeout(funcionFlotante,2000);
+}
+
+
+
+
 //funciones
 
 function funcionIngles(){
   idioma = 0;
+  flag=0;
+  funcionFlotante();
   funcionAbout();
 }
 
 function funcionEspanol(){
   idioma=1;
+  flag=0;
+  funcionFlotante();
   funcionAbout();
+}
+
+
+function funcionFlotante(){
+  flag=1;
+  if(idioma==0){
+  flotante_animacion.innerHTML=`
+  <div class="cuerpo_flotante">
+    <div class="imagen_flotante">
+      <img src="media/imagenes/fotoPerfil.jpeg" alt="">
+    </div>
+    <div class="texto_flotante">
+      <h1>Welcome to my PORTFOLIO!</h1>
+      <h2>Here you cand find information about my, my projects and my contact.</h2>
+      <h2>Thank you! :)</h2>
+    </div>
+
+    <div class="cruz_flotante">
+      <button type="button" name="button" id="cruz_flotante">X</button>
+    </div>
+  </div>
+  `}else if (idioma==1) {
+    flotante_animacion.innerHTML=`
+    <div class="cuerpo_flotante">
+      <div class="imagen_flotante">
+        <img src="media/imagenes/fotoPerfil.jpeg" alt="">
+      </div>
+      <div class="texto_flotante">
+        <h1>Bienvenido a mi PORTFOLIO</h1>
+        <h2>Aqui encontraras informacion sobre mi, mis proyectos y mi contacto.</h2>
+        <h2>Muchas gracias por tu visita :)</h2>
+      </div>
+
+      <div class="cruz_flotante">
+        <button type="button" name="button" id="cruz_flotante">X</button>
+      </div>
+    </div>
+    `
+  }
+  flotante.append(flotante_animacion);
+  flotante_animacion.classList="animacion-entrada";
+  setTimeout(funcionCruzFlotante,10000);
+  let cruz_flotante = document.getElementById("cruz_flotante");
+  cruz_flotante.addEventListener("click",funcionCruzFlotante);
+
+}
+
+function funcionCruzFlotante(){
+  flotante_animacion.classList = "animacion-salida";
+  setTimeout(cerrarFlotante,300);
+}
+
+function cerrarFlotante(){
+  flotante.innerHTML=""
 }
 
 function funcionAbout(){
@@ -643,11 +711,6 @@ function funcionResume(){
         </div>
 
       </div>
-
-
-
-
-
     </div>
 
     `
@@ -876,7 +939,3 @@ function TF(id){
 function cerrarTF(){
   informacion_works.innerHTML=""
 }
-
-
-//programa
- console.log(worksList);
