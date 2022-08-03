@@ -12,7 +12,7 @@ let btn_espanol = document.getElementById("btn_espanol");
 let idioma = 0;
 let flag=0;
 let flotante_animacion= document.createElement("div");
-
+let animacion= "animate__animated animate__fadeInLeft";
 
 btn_about.addEventListener("click",funcionAbout);
 btn_resume.addEventListener("click",funcionResume);
@@ -100,11 +100,12 @@ function cerrarFlotante(){
   flotante.innerHTML=""
 }
 
+
+
 function funcionAbout(){
     resume.innerHTML=""
     works.innerHTML=""
     contacto.innerHTML=""
-
     if(idioma==0){
 
     about.innerHTML = `
@@ -245,12 +246,14 @@ function funcionAbout(){
 
       `
     }
+    about.classList = animacion;
+    resume.classList=""
     btn_about.classList = "colorVerde"
     btn_resume.classList=""
     btn_works.classList=""
     btn_contacto.classList=""
-
 }
+
 
 function funcionResume(){
 
@@ -715,6 +718,12 @@ function funcionResume(){
 
     `
   }
+
+  about.classList = "";
+  resume.classList=animacion;
+  works.classList=""
+  contacto.classList=""
+
   btn_about.classList = ""
   btn_resume.classList="colorVerde"
   btn_works.classList=""
@@ -777,6 +786,11 @@ if(idioma == 0){
   }
 
   }
+
+  about.classList = "";
+  resume.classList="";
+  works.classList=animacion;
+  contacto.classList=""
 
   btn_about.classList = ""
   btn_resume.classList= ""
@@ -872,6 +886,11 @@ function funcionContact(){
     `
 
   }
+  about.classList = "";
+  resume.classList="";
+  works.classList="";
+  contacto.classList=animacion;
+
   btn_about.classList = ""
   btn_resume.classList= ""
   btn_works.classList=""
