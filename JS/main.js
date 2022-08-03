@@ -10,21 +10,23 @@ let btn_ingles = document.getElementById("btn_ingles");
 let btn_espanol = document.getElementById("btn_espanol");
 
 let idioma = 0;
-let flag=0;
-let flotante_animacion= document.createElement("div");
-let animacion= "animate__animated animate__fadeInLeft";
-
-btn_about.addEventListener("click",funcionAbout);
-btn_resume.addEventListener("click",funcionResume);
-btn_works.addEventListener("click",funcionWorks);
-btn_contacto.addEventListener("click",funcionContact);
-btn_ingles.addEventListener("click",funcionIngles);
-btn_espanol.addEventListener("click",funcionEspanol);
+let flag = 0;
+let flotante_animacion = document.createElement("div");
+let animacion = "animate__animated animate__fadeInLeft";
+let worksList = [];
+worksList = worksListEn;
 
 
-if (flag==0)
-{
-  setTimeout(funcionFlotante,2000);
+btn_about.addEventListener("click", funcionAbout);
+btn_resume.addEventListener("click", funcionResume);
+btn_works.addEventListener("click", funcionWorks);
+btn_contacto.addEventListener("click", funcionContact);
+btn_ingles.addEventListener("click", funcionIngles);
+btn_espanol.addEventListener("click", funcionEspanol);
+
+
+if (flag == 0) {
+  setTimeout(funcionFlotante, 2000);
 }
 
 
@@ -32,25 +34,27 @@ if (flag==0)
 
 //funciones
 
-function funcionIngles(){
+function funcionIngles() {
   idioma = 0;
-  flag=0;
+  flag = 0;
   funcionFlotante();
   funcionAbout();
+  worksList = worksListEn;
 }
 
-function funcionEspanol(){
-  idioma=1;
-  flag=0;
+function funcionEspanol() {
+  idioma = 1;
+  flag = 0;
   funcionFlotante();
   funcionAbout();
+  worksList = worksListEs;
 }
 
 
-function funcionFlotante(){
-  flag=1;
-  if(idioma==0){
-  flotante_animacion.innerHTML=`
+function funcionFlotante() {
+  flag = 1;
+  if (idioma == 0) {
+    flotante_animacion.innerHTML = `
   <div class="cuerpo_flotante">
     <div class="imagen_flotante">
       <img src="media/imagenes/fotoPerfil.jpeg" alt="">
@@ -65,8 +69,9 @@ function funcionFlotante(){
       <button type="button" name="button" id="cruz_flotante">X</button>
     </div>
   </div>
-  `}else if (idioma==1) {
-    flotante_animacion.innerHTML=`
+  `
+  } else if (idioma == 1) {
+    flotante_animacion.innerHTML = `
     <div class="cuerpo_flotante">
       <div class="imagen_flotante">
         <img src="media/imagenes/fotoPerfil.jpeg" alt="">
@@ -84,29 +89,29 @@ function funcionFlotante(){
     `
   }
   flotante.append(flotante_animacion);
-  flotante_animacion.classList="animate__animated animate__bounceInRight";
-  setTimeout(funcionCruzFlotante,10000);
+  flotante_animacion.classList = "animate__animated animate__bounceInRight";
+  setTimeout(funcionCruzFlotante, 10000);
   let cruz_flotante = document.getElementById("cruz_flotante");
-  cruz_flotante.addEventListener("click",funcionCruzFlotante);
+  cruz_flotante.addEventListener("click", funcionCruzFlotante);
 
 }
 
-function funcionCruzFlotante(){
+function funcionCruzFlotante() {
   flotante_animacion.classList = "animate__animated animate__bounceOutRight";
-  setTimeout(cerrarFlotante,300);
+  setTimeout(cerrarFlotante, 300);
 }
 
-function cerrarFlotante(){
-  flotante.innerHTML=""
+function cerrarFlotante() {
+  flotante.innerHTML = ""
 }
 
 
 
-function funcionAbout(){
-    resume.innerHTML=""
-    works.innerHTML=""
-    contacto.innerHTML=""
-    if(idioma==0){
+function funcionAbout() {
+  resume.innerHTML = ""
+  works.innerHTML = ""
+  contacto.innerHTML = ""
+  if (idioma == 0) {
 
     about.innerHTML = `
 
@@ -176,8 +181,9 @@ function funcionAbout(){
               </div>
             </div>
 
-    `}else if(idioma == 1){
-      about.innerHTML = `
+    `
+  } else if (idioma == 1) {
+    about.innerHTML = `
 
               <div class="informacion_contenido">
                 <div class="titulo_informacion">
@@ -245,24 +251,24 @@ function funcionAbout(){
               </div>
 
       `
-    }
-    about.classList = animacion;
-    resume.classList=""
-    btn_about.classList = "colorVerde"
-    btn_resume.classList=""
-    btn_works.classList=""
-    btn_contacto.classList=""
+  }
+  about.classList = animacion;
+  resume.classList = ""
+  btn_about.classList = "colorVerde"
+  btn_resume.classList = ""
+  btn_works.classList = ""
+  btn_contacto.classList = ""
 }
 
 
-function funcionResume(){
+function funcionResume() {
 
-  about.innerHTML=""
-  works.innerHTML=""
-    contacto.innerHTML=""
+  about.innerHTML = ""
+  works.innerHTML = ""
+  contacto.innerHTML = ""
 
-    if(idioma==0){
-  resume.innerHTML=`
+  if (idioma == 0) {
+    resume.innerHTML = `
   <!-- RESUME -->
 
   <div class="informacion_contenido">
@@ -491,8 +497,9 @@ function funcionResume(){
 
   </div>
 
-  `}else if(idioma ==1){
-    resume.innerHTML=`
+  `
+  } else if (idioma == 1) {
+    resume.innerHTML = `
     <!-- RESUME -->
 
     <div class="informacion_contenido">
@@ -720,26 +727,26 @@ function funcionResume(){
   }
 
   about.classList = "";
-  resume.classList=animacion;
-  works.classList=""
-  contacto.classList=""
+  resume.classList = animacion;
+  works.classList = ""
+  contacto.classList = ""
 
   btn_about.classList = ""
-  btn_resume.classList="colorVerde"
-  btn_works.classList=""
-  btn_contacto.classList=""
+  btn_resume.classList = "colorVerde"
+  btn_works.classList = ""
+  btn_contacto.classList = ""
 }
 
 
-function funcionWorks(){
+function funcionWorks() {
 
-  about.innerHTML=""
-  resume.innerHTML=""
-  contacto.innerHTML=""
+  about.innerHTML = ""
+  resume.innerHTML = ""
+  contacto.innerHTML = ""
 
-if(idioma == 0){
+  if (idioma == 0) {
 
-  works.innerHTML= `
+    works.innerHTML = `
 
   <div class="informacion_contenido">
     <div class="titulo_informacion">
@@ -751,8 +758,9 @@ if(idioma == 0){
 
     </div>
   </div>
-  `}else if (idioma == 1) {
-    works.innerHTML= `
+  `
+  } else if (idioma == 1) {
+    works.innerHTML = `
 
     <div class="informacion_contenido">
       <div class="titulo_informacion">
@@ -769,45 +777,45 @@ if(idioma == 0){
 
   let contenedor_2 = document.getElementById("contenedor_2");
 
-  for(const lista of worksList ){
+  for (const lista of worksList) {
     contenedor5 = document.createElement("div")
-    contenedor5.classList="contenedor5";
-    contenedor5.innerHTML=`
+    contenedor5.classList = "contenedor5";
+    contenedor5.innerHTML = `
           <button type="button" name="button" onclick="TF(${lista.id})">
             <img src="media/imagenes/${lista.img}" alt="">
             <h1>${lista.name} </h1>
             <h2>${lista.subtitule}</h2>
           </button>
       `
-  contenedor_2.append(contenedor5)
+    contenedor_2.append(contenedor5)
 
-  if(lista.id%2 == 1){
-    contenedor5.classList = 'contenedor5 bordeLateral'
-  }
+    if (lista.id % 2 == 1) {
+      contenedor5.classList = 'contenedor5 bordeLateral'
+    }
 
   }
 
   about.classList = "";
-  resume.classList="";
-  works.classList=animacion;
-  contacto.classList=""
+  resume.classList = "";
+  works.classList = animacion;
+  contacto.classList = ""
 
   btn_about.classList = ""
-  btn_resume.classList= ""
-  btn_works.classList="colorVerde"
-  btn_contacto.classList=""
+  btn_resume.classList = ""
+  btn_works.classList = "colorVerde"
+  btn_contacto.classList = ""
 
 }
 
 
-function funcionContact(){
+function funcionContact() {
 
-  about.innerHTML=""
-  resume.innerHTML=""
-  works.innerHTML=""
+  about.innerHTML = ""
+  resume.innerHTML = ""
+  works.innerHTML = ""
 
-  if(idioma==0){
-  contacto.innerHTML= `
+  if (idioma == 0) {
+    contacto.innerHTML = `
   <div class="informacion_contenido">
     <div class="titulo_informacion">
       <h1>Get</h1>
@@ -846,8 +854,9 @@ function funcionContact(){
 
 
 
-  `}else if(idioma==1){
-    contacto.innerHTML= `
+  `
+  } else if (idioma == 1) {
+    contacto.innerHTML = `
     <div class="informacion_contenido">
       <div class="titulo_informacion">
         <h1>Estamos</h1>
@@ -887,23 +896,23 @@ function funcionContact(){
 
   }
   about.classList = "";
-  resume.classList="";
-  works.classList="";
-  contacto.classList=animacion;
+  resume.classList = "";
+  works.classList = "";
+  contacto.classList = animacion;
 
   btn_about.classList = ""
-  btn_resume.classList= ""
-  btn_works.classList=""
-  btn_contacto.classList="colorVerde"
+  btn_resume.classList = ""
+  btn_works.classList = ""
+  btn_contacto.classList = "colorVerde"
 
 }
 
 
-function TF(id){
+function TF(id) {
 
   let item = worksList.find((lista) => lista.id === id);
-  if(idioma==0){
-  informacion_works.innerHTML=`
+  if (idioma == 0) {
+    informacion_works.innerHTML = `
   <div class="cuerpo_informacion">
     <div class="fondo_informacion">
 
@@ -926,8 +935,9 @@ function TF(id){
 
     </div>
   </div>
-  `}else if(idioma==1){
-    informacion_works.innerHTML=`
+  `
+  } else if (idioma == 1) {
+    informacion_works.innerHTML = `
     <div class="cuerpo_informacion">
       <div class="fondo_informacion">
 
@@ -955,6 +965,6 @@ function TF(id){
 }
 
 
-function cerrarTF(){
-  informacion_works.innerHTML=""
+function cerrarTF() {
+  informacion_works.innerHTML = ""
 }
