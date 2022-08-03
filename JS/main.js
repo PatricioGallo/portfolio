@@ -84,7 +84,7 @@ function funcionFlotante(){
     `
   }
   flotante.append(flotante_animacion);
-  flotante_animacion.classList="animacion-entrada";
+  flotante_animacion.classList="animate__animated animate__bounceInRight";
   setTimeout(funcionCruzFlotante,10000);
   let cruz_flotante = document.getElementById("cruz_flotante");
   cruz_flotante.addEventListener("click",funcionCruzFlotante);
@@ -92,7 +92,7 @@ function funcionFlotante(){
 }
 
 function funcionCruzFlotante(){
-  flotante_animacion.classList = "animacion-salida";
+  flotante_animacion.classList = "animate__animated animate__bounceOutRight";
   setTimeout(cerrarFlotante,300);
 }
 
