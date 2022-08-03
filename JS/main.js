@@ -6,20 +6,39 @@ let btn_about = document.getElementById("btn_about");
 let btn_resume = document.getElementById("btn_resume");
 let btn_works = document.getElementById("btn_works");
 let btn_contacto = document.getElementById("btn_contacto");
+let btn_ingles = document.getElementById("btn_ingles");
+let btn_espanol = document.getElementById("btn_espanol");
+let idioma = 0;
+
 
 
 btn_about.addEventListener("click",funcionAbout);
 btn_resume.addEventListener("click",funcionResume);
 btn_works.addEventListener("click",funcionWorks);
 btn_contacto.addEventListener("click",funcionContact);
+btn_ingles.addEventListener("click",funcionIngles);
+btn_espanol.addEventListener("click",funcionEspanol);
+
 
 //funciones
 
+function funcionIngles(){
+  idioma = 0;
+  funcionAbout();
+}
+
+function funcionEspanol(){
+  idioma=1;
+  funcionAbout();
+}
 
 function funcionAbout(){
     resume.innerHTML=""
     works.innerHTML=""
     contacto.innerHTML=""
+
+    if(idioma==0){
+
     about.innerHTML = `
 
             <div class="informacion_contenido">
@@ -67,6 +86,7 @@ function funcionAbout(){
                   <img src="media/imagenes/tilde.png" alt="">
                   <h1>DEVELOPING</h1>
                   <h2>Building web pages from scratch</h2>
+                  <br>
                 </div>
 
               </div>
@@ -87,7 +107,76 @@ function funcionAbout(){
               </div>
             </div>
 
-    `
+    `}else if(idioma == 1){
+      about.innerHTML = `
+
+              <div class="informacion_contenido">
+                <div class="titulo_informacion">
+                  <h1>Sobre</h1>
+                  <h2>Mi</h2>
+                </div>
+                <div class="contenedor_1">
+                  <div class="contenedor2" style='border-right: 1px solid rgb(205, 205, 205);' >
+                    <p>Soy Patricio Gallo Ingeniero Electrónico egresado de la Universidad Nacional de Tucumán en 2019. Tengo estudios en programación front-end y back-end, con conocimientos en HTML, CSS, JAVASCRIPT, MYSQL, PHP, PYTHON, entre otros. </p>                  </div>
+                  <div class="contenedor3">
+                    <div class="datos_persona">
+                      <h3>Edad:</h3>
+                      <h4>27</h4>
+                    </div>
+                    <div class="datos_persona">
+                      <h3>Residencia:</h3>
+                      <h4>Argentina</h4>
+                    </div>
+                    <div class="datos_persona">
+                      <h3>Direccion:</h3>
+                      <h4>Tucuman</h4>
+                    </div>
+                    <div class="datos_persona">
+                      <h3>Freelance:</h3>
+                      <h4>Disponible</h4>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="titulo_informacion">
+                  <h1>Mis</h1>
+                  <h2>Servicios</h2>
+                </div>
+                <div class="contenedor_1">
+                  <div class="contenedor2" style='border-right: 1px solid rgb(205, 205, 205);'>
+                    <img src="media/imagenes/tilde.png" alt="">
+                    <h1>DESARROLLO WEB</h1>
+                    <h2>Sitio web moderno y listo para dispositivos móviles que lo ayudará a alcanzar todo su marketing.</h2>
+                  </div>
+
+                  <div class="contenedor2" >
+                    <img src="media/imagenes/tilde.png" alt="">
+                    <h1>DESARROLLO</h1>
+                    <h2>Contruccion de paginas web desde cero.</h2>
+                    <br>
+                  </div>
+
+                </div>
+
+                <div class="contenedor_1">
+                  <div class="contenedor2" style="border-right: 1px solid rgb(205, 205, 205);">
+                    <img src="media/imagenes/tilde.png" alt="">
+                    <h1>PERSONALIZACION</h1>
+                    <h2>Trato 100% personalizado con el cliente y sus pedidos.</h2>
+                  </div>
+
+                  <div class="contenedor2">
+                    <img src="media/imagenes/tilde.png" alt="">
+                    <h1>OPTMIZACION</h1>
+                    <h2>Optimizacion de codigo para mejorar la experiencia del usuario.</h2>
+                  </div>
+
+                </div>
+              </div>
+
+      `
+    }
     btn_about.classList = "colorVerde"
     btn_resume.classList=""
     btn_works.classList=""
@@ -100,6 +189,8 @@ function funcionResume(){
   about.innerHTML=""
   works.innerHTML=""
     contacto.innerHTML=""
+
+    if(idioma==0){
   resume.innerHTML=`
   <!-- RESUME -->
 
@@ -329,7 +420,238 @@ function funcionResume(){
 
   </div>
 
-  `
+  `}else if(idioma ==1){
+    resume.innerHTML=`
+    <!-- RESUME -->
+
+    <div class="informacion_contenido">
+
+      <div class="titulo_informacion">
+        <h1>Resumen</h1>
+        <h2>De Mi</h2>
+      </div>
+      <div class="subtitulo">
+        <div class="subtitulo_1" style="border-right: 1px solid rgb(205, 205, 205);">
+          <img src="media/imagenes/experiencia.png" alt="">
+          <h1>EXPERIENCIA</h1>
+        </div>
+        <div class="subtitulo_1">
+          <img src="media/imagenes/book.png" alt="">
+          <h1>EDUCACION</h1>
+        </div>
+      </div>
+
+
+      <div class="contenedor_1">
+        <div class="contenedor4" style=" border-right:  1px solid rgb(205, 205, 205);">
+          <div class="tiempo_info">
+            <h4>2022 - Presente</h4>
+          </div>
+          <h1>Desarrollador Web</h1>
+          <h2>Freelancer</h2>
+          <h3>Desarrollador Front-end en pryoectos como freelancer.</h3>
+        </div>
+        <div class="contenedor4">
+          <div class="tiempo_info">
+            <h4>2013 - 2019</h4>
+          </div>
+          <h1>Ingeniero Electronico</h1>
+          <h2>UNT</h2>
+          <h3>Recibido en la Universidad Nacional de Tucuman como ingeniero electronico en el 2019.</h3>
+        </div>
+      </div>
+
+
+      <div class="contenedor_1">
+        <div class="contenedor4" style=" border-right:  1px solid rgb(205, 205, 205);">
+          <div class="tiempo_info">
+            <h4>2021 - 2022</h4>
+          </div>
+          <h1>Jefe de mantenimiento Electrico/Electronico</h1>
+          <h2>TN&Platex</h2>
+          <h3>Jefe a cargo del mantenimiento electrico electronico de maquinas para industria textil.</h3>
+        </div>
+
+        <div class="contenedor4">
+          <div class="tiempo_info">
+            <h4>2021 - 2022</h4>
+          </div>
+          <h1>Curso de desarrollo web</h1>
+          <h2>CoderHouse</h2>
+          <h3>Curso de desarrollo web completado: HTML, CSS and SASS.</h3>
+        </div>
+      </div>
+
+
+      <div class="contenedor_1">
+        <div class="contenedor4" style=" border-right:  1px solid rgb(205, 205, 205);">
+          <div class="tiempo_info">
+            <h4>2021 - Present</h4>
+          </div>
+          <h1>Docente</h1>
+          <h2>UTN</h2>
+          <h3>Jefe de trabajos practicos en la Universidad Tecnologica Nacional.</h3>
+        </div>
+        <div class="contenedor4">
+          <div class="tiempo_info">
+            <h4>2022- 2022</h4>
+          </div>
+          <h1>Curso de JAVASCRIPT</h1>
+          <h2>CoderHouse</h2>
+          <h3>Curso de programacion en lenguaje JAVASCRIPT finalizado</h3>
+        </div>
+      </div>
+
+
+      <div class="contenedor_1">
+        <div class="contenedor4" style=" border-right:  1px solid rgb(205, 205, 205);">
+          <div class="tiempo_info">
+            <h4>2012 - 2013</h4>
+          </div>
+          <h1>Soporte Tecnico</h1>
+          <h2>Discar SA</h2>
+          <h3>Encargado en el area de soporte tecnico para celulares.</h3>
+        </div>
+        <div class="contenedor4">
+          <div class="tiempo_info">
+            <h4>2002 - 2009</h4>
+          </div>
+          <h1>Certificacion en ingles</h1>
+          <h2>ANGLO</h2>
+          <h3>Completado siete años de cursado en ingles.</h3>
+        </div>
+      </div>
+
+
+      <div class="contenedor_1" style="border-bottom: 0px solid black;">
+        <div class="contenedor4" style=" border-right:  1px solid rgb(205, 205, 205);">
+
+          <h1></h1>
+          <h2></h2>
+          <h3></h3>
+        </div>
+        <div class="contenedor4">
+          <div class="tiempo_info">
+            <h4>2007 - 2012</h4>
+          </div>
+          <h1>Tecnico Electronico</h1>
+          <h2>ITSLM</h2>
+          <h3>Recibido de Tecnico Electronico en el Instituto Tecnico Salesiano Lorenzo Massa.</h3>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="titulo_informacion" style="margin-top:30px;">
+        <h1>Mis</h1>
+        <h2>Habilidades</h2>
+      </div>
+      <div class="subtitulo">
+        <div class="subtitulo">
+          <div class="subtitulo_1" style="border-right: 1px solid rgb(205, 205, 205);">
+            <img src="media/imagenes/coding.png" alt="">
+            <h1>CODING</h1>
+          </div>
+          <div class="subtitulo_1">
+            <img src="media/imagenes/lenguages.png" alt="">
+            <h1>LENGUAJES</h1>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="contenedor_1" style="border: 0px solid;">
+  <!-- CODING           -->
+        <div class="contenedor4" style=" border-right:  1px solid rgb(205, 205, 205);">
+          <div class="barras">
+            <h3>HTML y CSS</h3>
+            <div class="barra">
+              <div class="barra_90"></div>
+            </div>
+
+            <h3>JAVASCRIPT</h3>
+            <div class="barra">
+              <div class="barra_90"></div>
+            </div>
+
+            <h3>PHP y MYSQL</h3>
+            <div class="barra">
+              <div class="barra_70"></div>
+            </div>
+
+
+            <h3>BOOTSTRAP</h3>
+            <div class="barra">
+              <div class="barra_80"></div>
+            </div>
+          </div>
+        </div>
+
+  <!-- LEANGUAJES -->
+        <div class="contenedor4">
+
+          <div class="barras">
+            <h3>ESPAÑOL</h3>
+            <div class="circulos">
+              <div class="circulo_green" style="margin-left:0px;"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+            </div>
+          </div>
+
+          <div class="barras">
+            <h3>INGLES</h3>
+            <div class="circulos">
+              <div class="circulo_green" style="margin-left:0px;"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo"></div>
+              <div class="circulo"></div>
+            </div>
+          </div>
+
+          <div class="barras">
+            <h3>ITALIANO</h3>
+            <div class="circulos">
+              <div class="circulo_green" style="margin-left:0px;"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo_green"></div>
+              <div class="circulo"></div>
+              <div class="circulo"></div>
+              <div class="circulo"></div>
+              <div class="circulo"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+
+    `
+  }
   btn_about.classList = ""
   btn_resume.classList="colorVerde"
   btn_works.classList=""
@@ -342,6 +664,9 @@ function funcionWorks(){
   about.innerHTML=""
   resume.innerHTML=""
   contacto.innerHTML=""
+
+if(idioma == 0){
+
   works.innerHTML= `
 
   <div class="informacion_contenido">
@@ -354,7 +679,21 @@ function funcionWorks(){
 
     </div>
   </div>
-  `
+  `}else if (idioma == 1) {
+    works.innerHTML= `
+
+    <div class="informacion_contenido">
+      <div class="titulo_informacion">
+        <h1>Trabajos</h1>
+        <h2>Recientes</h2>
+      </div>
+
+      <div class="contenedor_2" id="contenedor_2">
+
+      </div>
+    </div>
+    `
+  }
 
   let contenedor_2 = document.getElementById("contenedor_2");
 
@@ -389,11 +728,16 @@ function funcionContact(){
   about.innerHTML=""
   resume.innerHTML=""
   works.innerHTML=""
+
+  if(idioma==0){
   contacto.innerHTML= `
   <div class="informacion_contenido">
     <div class="titulo_informacion">
       <h1>Get</h1>
       <h2>in Touch</h2>
+    </div>
+    <div class="contenedor_3">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113927.30717384933!2d-65.29263368353908!3d-26.832688473787936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94223792d6c56903%3A0xf88d5b92b5c56527!2sSan%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1659546692209!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <div class="contenedor_3">
@@ -425,8 +769,46 @@ function funcionContact(){
 
 
 
-  `
+  `}else if(idioma==1){
+    contacto.innerHTML= `
+    <div class="informacion_contenido">
+      <div class="titulo_informacion">
+        <h1>Estamos</h1>
+        <h2>En Contacto</h2>
+      </div>
 
+      <div class="contenedor_3" style="margin-bottom: 10px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113927.30717384933!2d-65.29263368353908!3d-26.832688473787936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94223792d6c56903%3A0xf88d5b92b5c56527!2sSan%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1659546692209!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="contenedor_3">
+
+        <div class="datos_persona">
+          <h3>Mail:</h3>
+          <h4>patogallo95@gmail.com</h4>
+        </div>
+        <div class="datos_persona">
+          <h3>Residencia:</h3>
+          <h4>Argentina</h4>
+        </div>
+        <div class="datos_persona">
+          <h3>Ciudad:</h3>
+          <h4>Tucuman</h4>
+        </div>
+        <div class="datos_persona">
+          <h3>Freelance:</h3>
+          <h4>Disponible</h4>
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+    `
+
+  }
   btn_about.classList = ""
   btn_resume.classList= ""
   btn_works.classList=""
@@ -438,6 +820,7 @@ function funcionContact(){
 function TF(id){
 
   let item = worksList.find((lista) => lista.id === id);
+  if(idioma==0){
   informacion_works.innerHTML=`
   <div class="cuerpo_informacion">
     <div class="fondo_informacion">
@@ -454,14 +837,39 @@ function TF(id){
         <p>${item.p2}</p>
         <p>${item.p3}</p>
         <div class="botones_informacion">
-            <a href="${item.proyectLink}" target="_blank"> <button type="button" name="button">VER PROYECTO</button> </a>
-            <a href="${item.codeLink}" target="_blank"> <button type="button" name="button">VER CODIGO</button> </a>
+            <a href="${item.proyectLink}" target="_blank"> <button type="button" name="button">VIEW PROJECT</button> </a>
+            <a href="${item.codeLink}" target="_blank"> <button type="button" name="button">VIEW CODE</button> </a>
         </div>
       </div>
 
     </div>
   </div>
-  `
+  `}else if(idioma==1){
+    informacion_works.innerHTML=`
+    <div class="cuerpo_informacion">
+      <div class="fondo_informacion">
+
+        <div class="cruz">
+          <button type="button" name="button" onclick="cerrarTF()">X</button>
+        </div>
+
+        <img src="media/imagenes/${item.img}" alt="">
+
+        <div class="contenido_informacion">
+          <h1>${item.name}</h1>
+          <p>${item.p1}</p>
+          <p>${item.p2}</p>
+          <p>${item.p3}</p>
+          <div class="botones_informacion">
+              <a href="${item.proyectLink}" target="_blank"> <button type="button" name="button">VER PROYECTO</button> </a>
+              <a href="${item.codeLink}" target="_blank"> <button type="button" name="button">VER CODIGO</button> </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    `
+  }
 }
 
 

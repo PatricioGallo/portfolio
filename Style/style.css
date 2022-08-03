@@ -294,6 +294,8 @@ body {
   justify-content: center;
 }
 
+
+
 .datos_persona {
   width: 80%;
   display: flex;
@@ -533,6 +535,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content:center;
+}
+
+.contenedor_3 iframe{
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .centrar {
