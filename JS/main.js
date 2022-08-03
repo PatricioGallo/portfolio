@@ -59,7 +59,7 @@ function funcionFlotante() {
     </div>
     <div class="texto_flotante">
       <h1>Welcome to my PORTFOLIO!</h1>
-      <h2>Here you cand find information about my, my projects and my contact.</h2>
+      <h2>Here you cand find information about me, my projects and my contact.</h2>
       <h2>Thank you! :)</h2>
     </div>
 
