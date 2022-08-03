@@ -21,53 +21,71 @@ function funcionAbout(){
     works.innerHTML=""
     contacto.innerHTML=""
     about.innerHTML = `
-    <div class="informacion_contenido">
-      <div class="titulo_informacion">
-        <h1>About</h1>
-        <h2>Me</h2>
-      </div>
-      <div class="contenedor_1">
-        <div class="contenedor2">
-          <p>Soy Patricio Gallo Ingeniero Electrónico recibido de la Universidad Nacional de Tucumán en el año 2019.
-            Tengo estudios en programación front-end y back-end, con conocimientos en HTML, CSS, JAVASCRIPT, MYSQL, PHP, PYTHON, entre otros.
-          </p>
-        </div>
-        <div class="contenedor3">
-          <div class="datos_persona">
-            <h3>Age:</h3>
-            <h4>27</h4>
-          </div>
-          <div class="datos_persona">
-            <h3>Residence:</h3>
-            <h4>Argentina</h4>
-          </div>
-          <div class="datos_persona">
-            <h3>Adress:</h3>
-            <h4>Tucuman</h4>
-          </div>
-          <div class="datos_persona">
-            <h3>Freelance:</h3>
-            <h4>Availible</h4>
-          </div>
-        </div>
-      </div>
+
+            <div class="informacion_contenido">
+              <div class="titulo_informacion">
+                <h1>About</h1>
+                <h2>Me</h2>
+              </div>
+              <div class="contenedor_1">
+                <div class="contenedor2" style='border-right: 1px solid rgb(205, 205, 205);' >
+                  <p>I am Patricio Gallo Electronic Engineer graduated from the National University of Tucumán in 2019. I have studies in front-end and back-end programming, with knowledge in HTML, CSS, JAVASCRIPT, MYSQL, PHP, PYTHON, among others.      </p>
+                </div>
+                <div class="contenedor3">
+                  <div class="datos_persona">
+                    <h3>Age:</h3>
+                    <h4>27</h4>
+                  </div>
+                  <div class="datos_persona">
+                    <h3>Residence:</h3>
+                    <h4>Argentina</h4>
+                  </div>
+                  <div class="datos_persona">
+                    <h3>Adress:</h3>
+                    <h4>Tucuman</h4>
+                  </div>
+                  <div class="datos_persona">
+                    <h3>Freelance:</h3>
+                    <h4>Availible</h4>
+                  </div>
+                </div>
+              </div>
 
 
-      <div class="titulo_informacion">
-        <h1>My</h1>
-        <h2>Services</h2>
-      </div>
-      <div class="contenedor_1">
-        <div class="contenedor2">
-          <img src="media/imagenes/coder.png" alt="">
-          <h1>WEB DEVOLPMENT</h1>
-          <h2>Modern and mobile-ready website that will help you reach all of your marketing.</h2>
-        </div>
-        <div class="contenedor3">
+              <div class="titulo_informacion">
+                <h1>My</h1>
+                <h2>Services</h2>
+              </div>
+              <div class="contenedor_1">
+                <div class="contenedor2" style='border-right: 1px solid rgb(205, 205, 205);'>
+                  <img src="media/imagenes/tilde.png" alt="">
+                  <h1>WEB DEVOLPMENT</h1>
+                  <h2>Modern and mobile-ready website that will help you reach all of your marketing.</h2>
+                </div>
 
-        </div>
-      </div>
-    </div>
+                <div class="contenedor2" >
+                  <img src="media/imagenes/tilde.png" alt="">
+                  <h1>DEVELOPING</h1>
+                  <h2>Building web pages from scratch</h2>
+                </div>
+
+              </div>
+
+              <div class="contenedor_1">
+                <div class="contenedor2" style="border-right: 1px solid rgb(205, 205, 205);">
+                  <img src="media/imagenes/tilde.png" alt="">
+                  <h1>PERSONALIZED</h1>
+                  <h2>100% personalized treatment with the client, and their orders.</h2>
+                </div>
+
+                <div class="contenedor2">
+                  <img src="media/imagenes/tilde.png" alt="">
+                  <h1>OPTIMIZATION</h1>
+                  <h2>Code optimization, to improve user experience on web pages.</h2>
+                </div>
+
+              </div>
+            </div>
 
     `
     btn_about.classList = "colorVerde"
@@ -97,7 +115,7 @@ function funcionResume(){
         <h1>EXPERIENCE</h1>
       </div>
       <div class="subtitulo_1">
-        <img src="media/imagenes/educacion.png" alt="">
+        <img src="media/imagenes/book.png" alt="">
         <h1>EDUCATION</h1>
       </div>
     </div>
@@ -110,15 +128,15 @@ function funcionResume(){
         </div>
         <h1>Web developer</h1>
         <h2>Freelancer</h2>
-        <h3>Desarrollo web front-end en proyectos como freelancer.</h3>
+        <h3>Front-end web development in projects as a freelancer.</h3>
       </div>
       <div class="contenedor4">
         <div class="tiempo_info">
           <h4>2013 - 2019</h4>
         </div>
-        <h1>Ingeniero Electronico</h1>
+        <h1>Electronic Engineer</h1>
         <h2>UNT</h2>
-        <h3>Recibido en la universidad nacion del tucuman como ingeniero electronico en el año 2019.</h3>
+        <h3>Received from the National University of Tucuman as an electronic engineer in 2019.</h3>
       </div>
     </div>
 
@@ -130,16 +148,16 @@ function funcionResume(){
         </div>
         <h1>Electrical manteince Chief</h1>
         <h2>TN&Platex</h2>
-        <h3>Jefe encargado de matenimiento electrico y electronico de maquinas para industria textil.</h3>
+        <h3>Head in charge of electrical and electronic maintenance of machines for the textile industry.</h3>
       </div>
 
       <div class="contenedor4">
         <div class="tiempo_info">
           <h4>2021 - 2022</h4>
         </div>
-        <h1>Curso de Desarrollo Web</h1>
+        <h1>Web Development Course</h1>
         <h2>CoderHouse</h2>
-        <h3>Curso de desarrollo web finalizado: HTML,CSS y SASS.</h3>
+        <h3>Completed web development course: HTML, CSS and SASS.</h3>
       </div>
     </div>
 
@@ -149,17 +167,17 @@ function funcionResume(){
         <div class="tiempo_info">
           <h4>2021 - Present</h4>
         </div>
-        <h1>Docente</h1>
+        <h1>Teacher</h1>
         <h2>UTN</h2>
-        <h3>Docente jefe de trabajos practicos en la Universidad Tecnologica Nacional</h3>
+        <h3>Head teacher of practical work at the National Technological University</h3>
       </div>
       <div class="contenedor4">
         <div class="tiempo_info">
           <h4>2022- 2022</h4>
         </div>
-        <h1>Curso de JavaScript</h1>
+        <h1>Javascript Course</h1>
         <h2>CoderHouse</h2>
-        <h3>Curso de programcion en lenguaje JAVASCRIPT finalizado</h3>
+        <h3>Programming course in JAVASCRIPT language finished</h3>
       </div>
     </div>
 
@@ -169,17 +187,17 @@ function funcionResume(){
         <div class="tiempo_info">
           <h4>2012 - 2013</h4>
         </div>
-        <h1>Soporte Tecnico</h1>
+        <h1>Technical Support</h1>
         <h2>Discar SA</h2>
-        <h3>Encargado en el area de reparacion de telefonos y celulares.</h3>
+        <h3>Manager in the area of telephone and cell phone repair.</h3>
       </div>
       <div class="contenedor4">
         <div class="tiempo_info">
           <h4>2002 - 2009</h4>
         </div>
-        <h1>Certificacion en ingles</h1>
+        <h1>Certification in English</h1>
         <h2>ANGLO</h2>
-        <h3>Cursos de siete años de ingles finalizados.</h3>
+        <h3>Completed seven-year English courses.</h3>
       </div>
     </div>
 
@@ -195,9 +213,9 @@ function funcionResume(){
         <div class="tiempo_info">
           <h4>2007 - 2012</h4>
         </div>
-        <h1>Tecnico Electronico</h1>
+        <h1>Electronic Technician</h1>
         <h2>ITSLM</h2>
-        <h3>Recibido de tecnico electronico en el instituto tecnico salesiano Lorenzo Massa en el año 2012.</h3>
+        <h3>Received as an electronic technician at the Lorenzo Massa Salesian Technical Institute in 2012.</h3>
       </div>
     </div>
 
