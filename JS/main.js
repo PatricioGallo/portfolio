@@ -841,10 +841,7 @@ function funcionContact() {
         <h3>Freelance:</h3>
         <h4>Availible</h4>
       </div>
-
-
     </div>
-
 
 
   </div>

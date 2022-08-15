@@ -1096,8 +1096,15 @@ body {
       display: flex;
       flex-direction: column;
       overflow: scroll;
+      position: relative;
     }
-
+    .admin{
+      position: absolute;
+      right: 0px;
+    }
+    .admin a{
+      color: white;
+      text-decoration: none;    }
     .contenedor2 {
       height: 300px;
     }
