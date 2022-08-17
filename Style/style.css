@@ -13,6 +13,10 @@ body {
 .colorVerde {
   color: rgb(10, 196, 73);
 }
+.colorNegro{
+  color: black;
+}
+
 
 .bordeLateral{
   border-right:  1px solid rgb(205, 205, 205);
@@ -197,6 +201,7 @@ body {
   cursor: pointer;
   font-size: 11px;
   border-radius: 5px;
+
 }
 
 .opcionMenu button img {
@@ -607,6 +612,7 @@ body {
     border: none;
     cursor: pointer;
     background-color: white;
+    color: black;
   }
 
   .contenedor5 button:hover{

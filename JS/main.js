@@ -253,9 +253,9 @@ function funcionAbout() {
   about.classList = animacion;
   resume.classList = ""
   btn_about.classList = "colorVerde"
-  btn_resume.classList = ""
-  btn_works.classList = ""
-  btn_contacto.classList = ""
+  btn_resume.classList = "colorNegro"
+  btn_works.classList = "colorNegro"
+  btn_contacto.classList = "colorNegro"
 }
 
 
@@ -729,10 +729,10 @@ function funcionResume() {
   works.classList = ""
   contacto.classList = ""
 
-  btn_about.classList = ""
+  btn_about.classList = "colorNegro"
   btn_resume.classList = "colorVerde"
-  btn_works.classList = ""
-  btn_contacto.classList = ""
+  btn_works.classList = "colorNegro"
+  btn_contacto.classList = "colorNegro"
 }
 
 
@@ -798,10 +798,10 @@ function funcionWorks() {
   works.classList = animacion;
   contacto.classList = ""
 
-  btn_about.classList = ""
-  btn_resume.classList = ""
+  btn_about.classList = "colorNegro"
+  btn_resume.classList = "colorNegro"
   btn_works.classList = "colorVerde"
-  btn_contacto.classList = ""
+  btn_contacto.classList = "colorNegro"
 
 }
 
@@ -895,9 +895,9 @@ function funcionContact() {
   works.classList = "";
   contacto.classList = animacion;
 
-  btn_about.classList = ""
-  btn_resume.classList = ""
-  btn_works.classList = ""
+  btn_about.classList = "colorNegro"
+  btn_resume.classList = "colorNegro"
+  btn_works.classList = "colorNegro"
   btn_contacto.classList = "colorVerde"
 
 }
