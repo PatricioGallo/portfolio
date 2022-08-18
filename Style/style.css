@@ -280,6 +280,7 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  height: 70px;
 }
 
 .CartaEleccion button {
