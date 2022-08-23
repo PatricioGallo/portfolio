@@ -22,7 +22,9 @@ body {
   border-right:  1px solid rgb(205, 205, 205);
 }
 
-
+.link_escondido a {
+  color:rgb(19, 196, 154);
+}
 
 /* animaciones */
 
@@ -771,8 +773,7 @@ body {
     flex-wrap: nowrap;
   }
 
-.idiomas{
-}
+
   .bordeLateral{
     border-right:  0px solid rgb(205, 205, 205);
   }
@@ -800,7 +801,7 @@ body {
   .opcionMenu {
     width: 100%;
     height: 100px;
-    border-bottom: : 0px solid rgb(205, 205, 205);
+    border-bottom: 0px solid rgb(205, 205, 205);
     border-right:  1px solid rgb(205, 205, 205);
     border-radius: 5px;
   }
@@ -994,7 +995,7 @@ body {
     .opcionMenu {
       width: 100%;
       height: 100px;
-      border-bottom: : 0px solid rgb(205, 205, 205);
+      border-bottom:  0px solid rgb(205, 205, 205);
       border-right:  1px solid rgb(205, 205, 205);
       border-radius: 5px;
     }

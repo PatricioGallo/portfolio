@@ -1,3 +1,8 @@
+<?php
+  require 'config/db.php';
+  require 'php/items.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,8 +34,9 @@
             <label for="name">Nombre</label>
             <input type="text" name="nombre">
             <label for="pass">Apellido</label>
-            <input type="text" name="pass">
+            <input type="password" name="pass">
             <button type="submit" name="button">INGRESAR</button>
+            <a href="index.php">VOLVER</a>
             <div class="error_form" id="error_form">
             </div>
           </form>
@@ -40,7 +46,55 @@
   </div>
 
   <div id="login">
+  <header>
+    <h1>ZONA DE ADMINISTRACION</h1>
+    <div class="botones">
+      <button type="button" name="button" id="inicio">INICIO</button>
+      <button type="button" name="button" id="config">CONFIGURACION</button>
+      <button type="button" name="button" id="salir" onclick="funcionLogout()">SALIR</button>
+    </div>
+  </header>
 
+  <div class="cuerpo">
+    <div class="container">
+      <h1>HOLA</h1>
+      <h4>Aqui estan tus estadisticas</h4>
+      
+      <table>
+      <tr>
+          <th>ID</th>
+          <th>LOCATION</th>
+          <th>CANTIDAD</th>
+          <th>FECHA</th>
+        </tr>
+
+      <?php
+      
+      foreach ($listatabla as $lista) {
+        $id= $lista['id'];
+        $location= $lista['location'];
+        $cantidad= $lista['cantidad'];
+        $fecha= $lista['fecha'];
+        ?>
+
+         <tr>
+          <td><?php echo $id;?></td>
+          <td><?php echo $location;?></td>
+          <td><?php echo $cantidad;?></td>
+          <td><?php echo $fecha;?></td>
+        </tr>
+
+      <?php }?>
+
+      </table>
+
+
+
+
+
+
+    </div>
+  </div>
   </div>
 
 

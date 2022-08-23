@@ -17,47 +17,19 @@ function validacionFormulario(e){
 
 
 function Funcionlogin(){
-  logout.innerHTML="";
-  login.innerHTML=`
-  <header>
-    <h1>ZONA DE ADMINISTRACION</h1>
-    <div class="botones">
-      <button type="button" name="button" id="inicio">INICIO</button>
-      <button type="button" name="button" id="contador">CONTADOR</button>
-      <button type="button" name="button" id="salir" onclick="funcionLogout()">SALIR</button>
-    </div>
-  </header>
-
-  <div class="cuerpo">
-    <div class="container">
-
-    </div>
-  </div>
-  `
+  logout.className="ocultar";
+  login.className="login"
 }
 
 
-
+function inicio(){
+  logout.className="logout";
+  login.className="ocultar";
+}
 
 function funcionLogout(){
-  login.innerHTML="";
-  logout.innerHTML=`
-  <div class="cuerpo">
-    <div class="container">
-      <div class="container_form">
-        <form class="" action="index.html" method="post" id="loginForm">
-          <label for="name">Nombre</label>
-          <input type="text" name="nombre">
-          <label for="pass">Apellido</label>
-          <input type="text" name="pass">
-          <button type="submit" name="button">INGRESAR</button>
-          <div class="error_form" id="error_form">
-          </div>
-        </form>
-        </div>
-    </div>
-  </div>
-  `
+  login.className="ocultar";
+  logout.className="logout";
 }
 
 
@@ -68,5 +40,6 @@ function funcionLogout(){
 let loginForm = document.getElementById("loginForm");
 let admin = "admin"
 let pass="1234"
-
+inicio();
 loginForm.addEventListener("submit",validacionFormulario)
+

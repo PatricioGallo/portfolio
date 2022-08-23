@@ -1,3 +1,22 @@
+<?php
+  require 'config/db.php';
+
+  $location="";
+  $DateAndTime = date('d-m-Y h:i:s a', time()); 
+
+  if($_GET){
+
+    if($_GET['location']){
+      $location = $_GET['location'];
+    }
+
+  }
+
+  $listaSQL= $conexion ->prepare("INSERT INTO `visitante` (`location`,`cantidad`, `fecha`) VALUES ( '$location','','$DateAndTime')  ");
+  $listaSQL ->execute();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -167,6 +186,10 @@
 
   <div id="informacion_works">
 
+  </div>
+  
+  <div class="link_escondido">
+    <a href="admin.php">ADMIN</a>
   </div>
 
   <script src="JS/main.js"></script>
