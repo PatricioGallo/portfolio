@@ -971,7 +971,9 @@ body {
       flex-wrap: nowrap;
     }
 
-
+    .link_escondido a {
+      color:white;
+    }
     /* --- MENU--- */
 
     .menu {
